@@ -6,6 +6,9 @@
         "xstring": "cpp",
         "10869.C": "cpp",
         "10998.C": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "xiosbase": "cpp",
+        "ios": "cpp"
     }
 }
