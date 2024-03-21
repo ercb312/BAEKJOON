@@ -1,30 +1,30 @@
 #include <iostream>
 using namespace std;
+#include <climits>
 
-void bubble_sort() {
-    int temp, n;
+int main() {
+    int n;
     cin >> n;
     int *p = new int[n];
-    for (int i = 0; i < n; i++) {
+
+    int min = INT_MAX;
+    int max = INT_MIN;
+
+    for (int i = 0; i < 9; i++) {
         cin >> p[i];
     }
 
-    for (int i = n - 1;  i>0; i--) {
-        for (int j = 0; j < i; j++) {
-            if (p[j] < p[j + 1]) {
-                temp = p[j];
-                p[j] = p[j + 1];
-                p[j + 1] = temp;
-            }
+    for (int i : p)
+    {
+        if (i < min) {
+            min = i;
+        }
+
+        if (i > max) {
+            max = i;
         }
     }
-    cout << p[0] << " " << p[n-1];
-}
 
+    cout << min << endl << max;
 
-int main() {
-    bubble_sort();
 }
-/*
-Bubble Sort
-*/
